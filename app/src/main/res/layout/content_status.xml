@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.roman.iot_nadzor.StatusActivity"
+    tools:showIn="@layout/activity_status">
+
+    <TextView
+        android:id="@+id/tvOutputType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Output Type:"/>
+
+    <RadioGroup
+        android:id="@+id/rgOutputType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvOutputType" >
+
+        <RadioButton
+            android:id="@+id/rbButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="selectOutput" />
+
+        <RadioButton
+            android:id="@+id/rbSwitch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Switch"
+            android:onClick="selectOutput" />
+
+        <RadioButton
+            android:id="@+id/rbEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="EditText"
+            android:onClick="selectOutput" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgOutputType"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Otput"/>
+
+    <RelativeLayout
+        android:id="@+id/rlOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOutput">
+
+        <Button
+            android:id="@+id/buttonOut"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundedbutton"
+            android:textColor="#fff"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:foregroundTint="@color/colorAccent" />
+
+        <Switch
+            android:id="@+id/switchOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:hint="Enter value"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlOut"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tvInputType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Type:"/>
+
+        <RadioGroup
+            android:id="@+id/rgInputType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInputType"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbLight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Light"
+                android:onClick="selectInput" />
+
+            <RadioButton
+                android:id="@+id/rbInEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:onClick="selectInput" />
+
+            <RadioButton
+                android:id="@+id/rbdummy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Dummmy"
+                android:enabled="false"
+                android:visibility="invisible"
+                android:onClick="selectInput" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rgInputType"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Input"/>
+
+        <RelativeLayout
+            android:id="@+id/rlInp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInput">
+
+            <Button
+                android:id="@+id/buttonIn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundedbutton"
+                android:textColor="#fff"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:foregroundTint="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/etInp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Value is: " />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

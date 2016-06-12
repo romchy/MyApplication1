@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">IoT_Nadzor</string>
+    <string name="action_add">Dodaj</string>
+    <string name="action_save">Shrani</string>
+    <string name="action_qr">QR</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Nastavitev</string>
+    <string name="title_activity_status">StatusActivity</string>
+    <string name="title_edit">Edit</string>
+    <string name="title_delete">Delete</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string-array name="fields">
+        <item>field1</item>
+        <item>field2</item>
+        <item>field3</item>
+        <item>field4</item>
+        <item>field5</item>
+        <item>field6</item>
+        <item>field7</item>
+        <item>field8</item>
+    </string-array>
+    <string-array name="settings_dialog">
+        <item>Export to QR Code</item>
+        <item>Import from QR Code</item>
+        <item>Manual Settings</item>
+    </string-array>
+    <string-array name="add_dialog">
+        <item>Add from QR</item>
+        <item>Manual add</item>
+    </string-array>
+    <string name="title_activity_qr_encode">QrEncodeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_qr_decode">QrDecodeActivity</string>
+    <string name="startScan">Scan QR Code</string>
+    <string name="returnValue">Return Value</string>
+    <string name="txtScan">Press "Scann QR Code" to get value</string>
+</resources>
